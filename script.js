@@ -12,4 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
             themeButton.textContent = "Dark Mode";
         }
     });
-});
+
+     // 2. Back-to-Top Button
+        const topButton = document.getElementById("back-to-top");
+
+        topButton.addEventListener("click", function () {
+                window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    });
