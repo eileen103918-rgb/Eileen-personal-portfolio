@@ -20,16 +20,21 @@
     cursor: pointer;
 }
 
-/* Menu: hidden until opened */
-(max-width: 600px) {
-    #main-nav {
-        display: none;
-    }
+/* Hide navigation links by default */
+#main-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    #main-nav.show-menu {
-        display: flex;
-        flex-direction: column;
-    }
+/* Show navigation links when Menu is pressed */
+#main-nav.show-menu {
+    display: flex;
+}
+
+/* Menu button */
+#menu-toggle {
+    cursor: pointer;
 }
 
 /* Scroll progress bar */
