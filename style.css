@@ -20,8 +20,8 @@
     cursor: pointer;
 }
 
-/* Mobile menu: hidden until opened */
-@media (max-width: 600px) {
+/* Menu: hidden until opened */
+(max-width: 600px) {
     #main-nav {
         display: none;
     }
