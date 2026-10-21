@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-    // 3. Mobile Navigation Menu
+    // 3. Navigation Menu
     const menuButton = document.getElementById("menu-toggle");
     const nav = document.getElementById("main-nav");
 
