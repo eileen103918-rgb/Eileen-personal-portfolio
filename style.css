@@ -2,6 +2,10 @@
 .dark-mode {
     background-color: #222;
     color: #f5f5f5;
+
+    position: fixed;
+    right: 20px;
+    top:20px;
 }
 
 /* Back-to-top button */
@@ -10,4 +14,27 @@
     right: 20px;
     bottom: 20px;
     cursor: pointer;
+}
+
+/* Mobile menu: hidden until opened */
+@media (max-width: 600px) {
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav.show-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: #2673d9;
+    z-index: 1000;
 }
