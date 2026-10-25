@@ -132,3 +132,22 @@
     font-weight: bold;
 }
 
+/* Copy Email Button */
+#copy-email {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2673d9;
+    color: white;
+    cursor: pointer;
+}
+
+#copy-email:hover {
+    opacity: 0.85;
+}
+
+#copy-feedback {
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
