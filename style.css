@@ -92,3 +92,10 @@
     margin: 15px 0;
 }
 
+/* Live Date and Clock */
+#live-clock {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
