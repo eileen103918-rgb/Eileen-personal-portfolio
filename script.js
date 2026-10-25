@@ -238,16 +238,17 @@ document.addEventListener("DOMContentLoaded", function () {
             const isHidden = contactForm.hidden;
 
             contactForm.hidden = !isHidden;
+
             toggleFormButton.textContent = isHidden
                 ? "Hide Contact Form"
                 : "Show Contact Form";
 
             toggleFormButton.setAttribute("aria-expanded", isHidden);
-            const formFeedback = document.getElementById("form-feedback");
 
-    if (formFeedback && !isHidden) {
-    formFeedback.textContent = "";
-    }
+            // Clear the previous message when hiding the form
+            if (formFeedback && !isHidden) {
+                formFeedback.textContent = "";
+            }
         });
     }
 });
