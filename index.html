@@ -17,7 +17,7 @@
         <header>
             <h1>My Personal Portfolio</h1>
 
-            <button id="theme-toggle" type="button">
+            <button id="theme-toggle" type="button" aria-label="Switch colour theme">
                 Dark Mode
             </button>
 
@@ -130,6 +130,14 @@
     <section id="contact">
     <h2>Contact Me</h2>
     <p>Click the button below to send me a message.</p>
+        <p>
+    Email:
+    <span id="email-address">103918@siswa.unimas.my</span>
+    </p>
+
+    <button id="copy-email" type="button">Copy Email</button>
+
+    <p id="copy-feedback" role="status" aria-live="polite"></p>
 
     <button id="toggle-form" type="button"
         aria-expanded="false"
