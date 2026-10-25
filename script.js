@@ -110,7 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     card.style.display = "none";
                 }
             });
-      // 6. Time-Based Greeting
+            
+        });
+    });
+
+          // 6. Time-Based Greeting
     const greeting = document.getElementById("greeting");
 
     if (greeting) {
@@ -126,9 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         greeting.textContent = message;
-    });
-            
-        });
-    });
-
+    }
 });
+
