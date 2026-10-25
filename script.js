@@ -13,15 +13,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-     // 2. Back-to-Top Button
-        const topButton = document.getElementById("back-to-top");
+         // 2. Up and Down Arrow Button
+    const topButton = document.getElementById("back-to-top");
 
-        topButton.addEventListener("click", function () {
-                window.scrollTo({
+    function updateArrow() {
+        const atBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 5;
+
+        if (atBottom) {
+            topButton.textContent = "↑";
+            topButton.setAttribute("aria-label", "Scroll to top");
+        } else {
+            topButton.textContent = "↓";
+            topButton.setAttribute("aria-label", "Scroll down");
+        }
+    }
+
+    topButton.addEventListener("click", function () {
+        const atBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 5;
+
+        if (atBottom) {
+            window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
-        });
+        } else {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: "smooth"
+            });
+        }
+    });
+
+    window.addEventListener("scroll", updateArrow);
+    window.addEventListener("resize", updateArrow);
+    updateArrow();
 
     // 3. Navigation Menu
     const menuButton = document.getElementById("menu-toggle");
