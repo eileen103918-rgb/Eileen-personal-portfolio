@@ -205,5 +205,29 @@ document.addEventListener("DOMContentLoaded", function () {
             contactForm.reset();
         });
     }
+
+    // 9. Copy Email Button
+    const copyButton = document.getElementById("copy-email");
+    const emailAddress = document.getElementById("email-address");
+    const copyFeedback = document.getElementById("copy-feedback");
+
+    if (copyButton && emailAddress && copyFeedback) {
+        copyButton.addEventListener("click", async function () {
+            const email = emailAddress.textContent.trim();
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(email);
+                } else {
+                    throw new Error("Clipboard unavailable");
+                }
+
+                copyFeedback.textContent = "Email copied successfully!";
+            } catch (error) {
+                copyFeedback.textContent =
+                    "Unable to copy automatically. Please copy: " + email;
+            }
+        });
+    }
 });
 
