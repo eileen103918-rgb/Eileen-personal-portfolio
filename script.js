@@ -243,6 +243,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 : "Show Contact Form";
 
             toggleFormButton.setAttribute("aria-expanded", isHidden);
+            const formFeedback = document.getElementById("form-feedback");
+
+    if (formFeedback && !isHidden) {
+    formFeedback.textContent = "";
+    }
         });
     }
 });
