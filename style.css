@@ -107,6 +107,7 @@
     max-width: 500px;
 }
 
+/* Form input fields */
 #contact-form input,
 #contact-form textarea {
     padding: 10px;
@@ -115,6 +116,7 @@
     font: inherit;
 }
 
+/* Submit button */
 #contact-form button {
     padding: 10px;
     border: none;
@@ -128,8 +130,9 @@
     opacity: 0.85;
 }
 
-#form-feedback {
-    font-weight: bold;
+/* Hide form when the hidden attribute is applied */
+#contact-form[hidden] {
+    display: none !important;
 }
 
 /* Copy Email Button */
