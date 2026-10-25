@@ -163,5 +163,47 @@ document.addEventListener("DOMContentLoaded", function () {
         updateClock();
         setInterval(updateClock, 1000);
     }
+
+     // 8. Contact Form Validation
+    const contactForm = document.getElementById("contact-form");
+    const formFeedback = document.getElementById("form-feedback");
+
+    if (contactForm && formFeedback) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("visitor-name");
+            const email = document.getElementById("visitor-email");
+            const message = document.getElementById("visitor-message");
+
+            if (!name || !email || !message) {
+                formFeedback.textContent =
+                    "Sorry, the form could not be checked. Please try again.";
+                return;
+            }
+
+            if (
+                name.value.trim() === "" ||
+                email.value.trim() === "" ||
+                message.value.trim() === ""
+            ) {
+                formFeedback.textContent =
+                    "Please fill in all fields.";
+                return;
+            }
+
+            if (!email.validity.valid) {
+                formFeedback.textContent =
+                    "Please enter a valid email address.";
+                return;
+            }
+
+            formFeedback.textContent =
+                "Thank you, " + name.value.trim() +
+                "! The form passed validation.";
+
+            contactForm.reset();
+        });
+    }
 });
 
