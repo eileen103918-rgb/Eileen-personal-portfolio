@@ -12,12 +12,20 @@
     cursor: pointer;
 }
 
-/* Back-to-top button */
+/* Up and Down Arrow Button */
 #back-to-top {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2673d9;
+    color: white;
+    font-size: 25px;
     cursor: pointer;
+    z-index: 1001;
 }
 
 /* Hide navigation links by default */
