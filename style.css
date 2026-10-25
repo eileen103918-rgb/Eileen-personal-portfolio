@@ -154,8 +154,3 @@
     margin-top: 8px;
 }
 
-/* Hide the contact form when the hidden attribute is applied */
-#contact-form[hidden] {
-    display: none !important;
-}
-
