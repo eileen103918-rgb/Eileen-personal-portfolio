@@ -229,5 +229,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // 10. Show and Hide Contact Form
+    const toggleFormButton = document.getElementById("toggle-form");
+
+    if (toggleFormButton && contactForm) {
+        toggleFormButton.addEventListener("click", function () {
+            const isHidden = contactForm.hidden;
+
+            contactForm.hidden = !isHidden;
+            toggleFormButton.textContent = isHidden
+                ? "Hide Contact Form"
+                : "Show Contact Form";
+
+            toggleFormButton.setAttribute("aria-expanded", isHidden);
+        });
+    }
 });
 
