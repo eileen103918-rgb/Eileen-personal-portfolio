@@ -85,3 +85,10 @@
     color: #2673d9;
 }
 
+/* Time-based greeting */
+#greeting {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
