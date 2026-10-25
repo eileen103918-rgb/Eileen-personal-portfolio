@@ -99,3 +99,36 @@
     opacity: 0.85;
 }
 
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font: inherit;
+}
+
+#contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2673d9;
+    color: white;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    opacity: 0.85;
+}
+
+#form-feedback {
+    font-weight: bold;
+}
+
