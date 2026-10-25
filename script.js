@@ -110,9 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     card.style.display = "none";
                 }
             });
-        });
-    });
-
       // 6. Time-Based Greeting
     const greeting = document.getElementById("greeting");
 
@@ -129,6 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         greeting.textContent = message;
+    });
+            
+        });
     });
 
 });
