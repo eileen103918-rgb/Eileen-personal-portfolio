@@ -113,4 +113,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+      // 6. Time-Based Greeting
+    const greeting = document.getElementById("greeting");
+
+    if (greeting) {
+        const currentHour = new Date().getHours();
+        let message;
+
+        if (currentHour < 12) {
+            message = "Good morning! Welcome to my portfolio.";
+        } else if (currentHour < 18) {
+            message = "Good afternoon! Welcome to my portfolio.";
+        } else {
+            message = "Good evening! Welcome to my portfolio.";
+        }
+
+        greeting.textContent = message;
+    });
+
 });
