@@ -131,5 +131,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
         greeting.textContent = message;
     }
+
+        // 7. Live Date and Clock
+    const liveClock = document.getElementById("live-clock");
+
+    function updateClock() {
+        if (!liveClock) {
+            return;
+        }
+
+        const now = new Date();
+
+        const date = now.toLocaleDateString("en-MY", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+
+        const time = now.toLocaleTimeString("en-MY", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
+
+        liveClock.textContent = date + " | " + time;
+    }
+
+    if (liveClock) {
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
 });
 
